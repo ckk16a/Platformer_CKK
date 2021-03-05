@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class PickUp : MonoBehaviour
 {
-     PointCounter pointCounter;
+    GameManager manny;
 
     // Start is called before the first frame update
     void Start()
     {
-        pointCounter = GameObject.Find("Canvas").GetComponent<PointCounter>();
+        manny = GameObject.FindGameObjectWithTag("MrManager").GetComponent<GameManager>();
     }
 
     void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.tag == "Player") 
         {
-            pointCounter.score ++;
+            manny.highScore ++;
             Destroy(gameObject);
         }
     }

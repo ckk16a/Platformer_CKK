@@ -8,6 +8,7 @@ TagManager:
   - pointA
   - pointB
   - BadGuy
+  - MrManager
   layers:
   - Default
   - TransparentFX

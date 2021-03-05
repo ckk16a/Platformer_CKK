@@ -41,12 +41,10 @@ public class BadGuy : MonoBehaviour
         Debug.Log("We hit SOMETHING");
         if (other.gameObject.tag == "pointA") 
         {
-            Debug.Log("We hit pointA");
             goForward = false;
         }
         else if (other.gameObject.tag == "pointB")
         {
-            Debug.Log("We hit pointB");
             goForward = true;
         }
     }

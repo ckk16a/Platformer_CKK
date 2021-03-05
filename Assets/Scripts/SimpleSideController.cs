@@ -17,9 +17,15 @@ public class SimpleSideController : MonoBehaviour
 
     SpriteRenderer spriteRenderer;
 
+    public Joystick joystick;
+
+    public bool shoot = false;
+    public bool jump = false;
+
     public GameObject spawnPoint;
     public GameObject energyBall;
     public bool fireForward = true;
+    public float horizontalInput;
 
     // Start is called before the first frame update
     void Start()
@@ -29,11 +35,31 @@ public class SimpleSideController : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
+    public void setShoot()
+    {
+        shoot = true;
+    }
+
+    public void setJump()
+    {
+        jump = true;
+    }
+
     // Update is called once per frame
     void Update()
     {
         // What Moves Us
-        float horizontalInput = Input.GetAxis("Horizontal");
+        if(joystick.Horizontal >= .2f)
+        {
+            horizontalInput = 1;
+            
+        } else if(joystick.Horizontal <= -.2f)
+        {
+            horizontalInput = -1;
+        } else
+        {
+            horizontalInput = 0;
+        }
         //Get the value of the Horizontal input axis.
 
         transform.Translate(new Vector3(horizontalInput, 0, 0) * moveSpeed * Time.deltaTime);
@@ -58,17 +84,19 @@ public class SimpleSideController : MonoBehaviour
 
     void FixedUpdate() 
     {
-        if (Input.GetButton("Jump") && isGrounded) 
+        if (jump) 
         {
             blahblah.AddForce(transform.up * jumpForce);
             animator.SetBool("isJumping", true);
+            jump = false;
         }
 
-        if (Input.GetButtonDown("Fire1")) 
+        if (shoot) 
         {
             animator.SetTrigger("IsAttack");
             // now instantiate the ball and propel forward
             FireEnergyBall();
+            shoot = false;
         }
     }
 
