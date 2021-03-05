@@ -2083,6 +2083,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8430475130885280527, guid: 9beec0b83bf9649208bf72b8b595aa94,
         type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 1275002085}
+    - target: {fileID: 8430475130885280527, guid: 9beec0b83bf9649208bf72b8b595aa94,
+        type: 3}
       propertyPath: energyBall
       value: 
       objectReference: {fileID: 3209905044883177388, guid: 8d04b836f68534868a9c7b7047b9dd89,
@@ -2175,6 +2180,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 408437334}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &581807012 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8430475130885280527, guid: 9beec0b83bf9649208bf72b8b595aa94,
+    type: 3}
+  m_PrefabInstance: {fileID: 355122312}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40635ed2f323e42eb82ebc6f34b99597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &645057386
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3090,6 +3107,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1127537886}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1275002085 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 39756583746586529, guid: ccf0c006eb5c341fd8522f2d875ef554,
+    type: 3}
+  m_PrefabInstance: {fileID: 1447389735}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45977bbae16431c46a013576a1aea384, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1436484755
 GameObject:
   m_ObjectHideFlags: 0
@@ -3163,6 +3192,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 407958584, guid: ccf0c006eb5c341fd8522f2d875ef554, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 581807012}
+    - target: {fileID: 407958584, guid: ccf0c006eb5c341fd8522f2d875ef554, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: setJump
+      objectReference: {fileID: 0}
+    - target: {fileID: 957646374, guid: ccf0c006eb5c341fd8522f2d875ef554, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 581807012}
+    - target: {fileID: 957646374, guid: ccf0c006eb5c341fd8522f2d875ef554, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: setShoot
+      objectReference: {fileID: 0}
     - target: {fileID: 2894676600979678576, guid: ccf0c006eb5c341fd8522f2d875ef554,
         type: 3}
       propertyPath: m_Name
